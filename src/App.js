@@ -1,22 +1,29 @@
 import logo from './logo.svg';
 import './App.css';
+import { useEffect, useState } from 'react';
 
 function App() {
+
+  const [showGreeting, setShowGreeting] = useState(true);
+  const [greeting, setGreeting] = useState('');
+
+  const iterateGreeting = function() {
+    const words = ['Здравствуйте', 'Bonjour', 'Ciao', 'Hola', 'Hello'];
+    for (const [index, word] of words.entries()) {
+      console.log(index, word)
+      setTimeout(() => setGreeting(word), index * 1000)
+    }
+  };
+
+  useEffect(() => iterateGreeting(), []);
+
+  //setTimeout(() => setGreeting(false), 1000);
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      {showGreeting && <p>{greeting}!</p>}
+      {!showGreeting && <p>homepage</p>}
       </header>
     </div>
   );
