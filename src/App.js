@@ -6,13 +6,18 @@ function App() {
   const [showGreeting, setShowGreeting] = useState(true);
   const [greeting, setGreeting] = useState('');
   const [greetingArr, setGreetingArr] = useState([]);
-  //const words = ['Здравствуйте', 'Bonjour', 'Ciao', 'Hola', 'Hello'];
+  const xCoords = [];
 
   const iterateGreeting = function () {
     const words = ['Здравствуйте', 'Bonjour', 'Ciao', 'Hola', 'Hello'];
     for (const [index, word] of words.entries()) {
-      console.log(index, word)
-      setTimeout(() => setGreeting(word), (index + 2) * 500)
+      //console.log(index, word)
+      let x = Math.round(Math.random() * 20) * 5;
+      while (xCoords.includes(x)) {
+        x = Math.round(Math.random() * 20) * 5;
+      }
+      console.log(x);
+      setTimeout(() => setGreeting(word), (index + 2) * 500);
     }
   };
 
@@ -32,10 +37,11 @@ function App() {
 
   useEffect(() => iterateGreeting(), []);
   useEffect(() => {
-    const x = Math.random() * 60 + 20;
-    const y = Math.random() * 60 + 20;
+    const key = greetingArr.length;
+    const x = Math.random() * 80 + 10;
+    const y = Math.random() * 60 + 10;
     console.log(x, y);
-    setGreetingArr(prev => [...prev, <p key={greetingArr.length} className="greetings__container" style={{ top: `${x}vh`, left: `${y}vh` }}>{greeting}!</p>])
+    greeting && setGreetingArr(prev => [...prev, <p key={key} className="greeting__container" style={{ top: `${x}vh`, left: `${y}vh` }}>{greeting}!</p>])
   }, [greeting]);
 
   //setTimeout(() => setGreeting(false), 1000);
