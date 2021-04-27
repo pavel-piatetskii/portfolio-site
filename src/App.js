@@ -6,17 +6,18 @@ function App() {
   const [showGreeting, setShowGreeting] = useState(true);
   const [greeting, setGreeting] = useState('');
   const [greetingArr, setGreetingArr] = useState([]);
-  const xCoords = [];
+  const [occupiedZones, setOccupiedZones] = useState([]);
+  let OZ = [];
 
   const iterateGreeting = function () {
     const words = ['Hello','Здравствуйте', 'Bonjour', 'Ciao', 'Hola', 'Guten Tag', 'Willkommen',
-                   'Bienvenidos', 'Benvenuto', 'Bienvenue', 'Добро пожаловать', 'Welcome' ];
+                   'Bienvenidos', 'Benvenuto', 'Bienvenue', 'Добро пожаловать'];
     for (const [index, word] of words.entries()) {
-      let x = Math.round(Math.random() * 20) * 5;
-      while (xCoords.includes(x)) {
-        x = Math.round(Math.random() * 20) * 5;
-      }
-      console.log(x);
+      //let x = Math.round(Math.random() * 20) * 5;
+      //while (xCoords.includes(x)) {
+      //  x = Math.round(Math.random() * 20) * 5;
+      //}
+      //console.log(x);
       setTimeout(() => setGreeting(word), (index + 2) * 250);
     }
   };
@@ -35,14 +36,33 @@ function App() {
   //
   //};
 
-  useEffect(() => iterateGreeting(), []);
+  useEffect(() => {
+    //setOccupiedZones([]);
+    iterateGreeting();
+  }, []);
   useEffect(() => {
     const key = greetingArr.length;
-    
-    const x = Math.round(Math.random() * 80 + 10);
-    const y = Math.round(Math.random() * 80 + 10);
-    console.log(x, y);
-    greeting && setGreetingArr(prev => [...prev, <p key={key} className="greeting__container" style={{ top: `${x}vh`, left: `${y}vw` }}>{greeting}</p>])
+    const zones = [
+      [22, 20], [22, 40], [22, 60], [22, 80],
+      [46, 20], [46, 40], [46, 60], [46, 80],
+      [70, 20], [70, 40], [70, 60], [70, 80],
+    ];
+
+    let zone = Math.floor(Math.random() * 12);
+    while (occupiedZones.includes(zone) || zone === 1) {
+      zone = Math.floor(Math.random() * 12);
+      //if (occupiedZones.length === 11) break;
+      console.log(zone)
+    };
+    setOccupiedZones(prev => [...prev, zone])
+
+    //const h = Math.round(Math.random() * 20 - 15 + zones[zone][0]);
+    //const w = Math.round(Math.random() * 20 - 15 + zones[zone][1]);
+    const h = zones[zone][0];
+    const w = zones[zone][1];
+    console.log(h, w, zone, greeting);
+    console.log('zones: ', occupiedZones)
+    greeting && setGreetingArr(prev => [...prev, <p key={key} className="greeting__container" style={{ top: `${h}vh`, left: `${w}vw` }}>{greeting}</p>])
   }, [greeting]);
 
   //setTimeout(() => setGreeting(false), 1000);
