@@ -9,15 +9,15 @@ function App() {
   const xCoords = [];
 
   const iterateGreeting = function () {
-    const words = ['Здравствуйте', 'Bonjour', 'Ciao', 'Hola', 'Hello'];
+    const words = ['Hello','Здравствуйте', 'Bonjour', 'Ciao', 'Hola', 'Guten Tag', 'Willkommen',
+                   'Bienvenidos', 'Benvenuto', 'Bienvenue', 'Добро пожаловать', 'Welcome' ];
     for (const [index, word] of words.entries()) {
-      //console.log(index, word)
       let x = Math.round(Math.random() * 20) * 5;
       while (xCoords.includes(x)) {
         x = Math.round(Math.random() * 20) * 5;
       }
       console.log(x);
-      setTimeout(() => setGreeting(word), (index + 2) * 500);
+      setTimeout(() => setGreeting(word), (index + 2) * 250);
     }
   };
 
@@ -38,10 +38,11 @@ function App() {
   useEffect(() => iterateGreeting(), []);
   useEffect(() => {
     const key = greetingArr.length;
-    const x = Math.random() * 80 + 10;
-    const y = Math.random() * 60 + 10;
+    
+    const x = Math.round(Math.random() * 80 + 10);
+    const y = Math.round(Math.random() * 80 + 10);
     console.log(x, y);
-    greeting && setGreetingArr(prev => [...prev, <p key={key} className="greeting__container" style={{ top: `${x}vh`, left: `${y}vh` }}>{greeting}!</p>])
+    greeting && setGreetingArr(prev => [...prev, <p key={key} className="greeting__container" style={{ top: `${x}vh`, left: `${y}vw` }}>{greeting}</p>])
   }, [greeting]);
 
   //setTimeout(() => setGreeting(false), 1000);
