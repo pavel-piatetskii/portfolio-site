@@ -3,7 +3,8 @@ import { useEffect, useState } from 'react';
 
 export default function Greetings(props) {
 
-  const [showGreeting, setShowGreeting] = useState(true);
+  const { setShowGreeting } = props;
+
   const [greeting, setGreeting] = useState('');
   const [greetingArr, setGreetingArr] = useState([]);
   const [occupiedZones, setOccupiedZones] = useState([]);
@@ -32,14 +33,9 @@ export default function Greetings(props) {
     while (occupiedZones.includes(zone) || zone === 1) {
       zone = Math.floor(Math.random() * 12);
       //if (occupiedZones.length === 11) break;
-      console.log(`key: ${key}`)
-      if (key >= 11) {
-        //setGreetingArr(prev => [...prev, <p key={key} className="greeting__container" style={{ top: `${h}vh`, left: `${w}vw` }}>{greeting}</p>])
-        zone = 1;
-        break;
-      }
+      //console.log(`key: ${key}`)
     };
-    console.log(`zone: ${zone}   key: ${key}    occupied: ${occupiedZones}`);
+    //console.log(`zone: ${zone}   key: ${key}    occupied: ${occupiedZones}`);
     setOccupiedZones(prev => [...prev, zone])
   
     //const h = Math.round(Math.random() * 20 - 15 + zones[zone][0]);
@@ -56,7 +52,6 @@ export default function Greetings(props) {
   return (
       <div className="greetings">
         {greeting && greetingArr.map((gr) => gr)}
-        {!showGreeting && <p>homepage</p>}
       </div>
   );
 };
