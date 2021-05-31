@@ -1,5 +1,6 @@
 import './App.scss';
 import Greetings from './Greetings';
+import NavBar from './NavBar';
 import Homepage from './Homepage';
 import { useEffect, useState } from 'react';
 
@@ -10,7 +11,7 @@ function App() {
   return (
     <div className="App">
         {showGreetings && <Greetings setShowGreetings={setShowGreetings} />}
-        {!showGreetings && <Homepage />}
+        {!showGreetings && <NavBar />}
     </div>
   );
 }
