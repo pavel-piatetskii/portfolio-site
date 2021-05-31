@@ -5,23 +5,40 @@ export default function Greetings(props) {
 
   const { setShowGreeting } = props;
 
-  const [greeting, setGreeting] = useState('');
+  //const [greeting, setGreeting] = useState('');
   const [greetingArr, setGreetingArr] = useState([]);
-  const [occupiedZones, setOccupiedZones] = useState([]);
-  let OZ = [];
+  //const [occupiedZones, setOccupiedZones] = useState([]);
   
   const iterateGreeting = function () {
-    const words = ['Hello','Здравствуйте', 'Bonjour', 'Ciao', 'Hola', 'Guten Tag', 'Willkommen',
-                   'Bienvenidos', 'Benvenuto', 'Bienvenue', 'Добро пожаловать', 'Welcome'];
+    const zones = [
+      [22, 20], [22, 40], [22, 60], [22, 80],
+      [46, 20], [46, 40], [46, 60], [46, 80],
+      [70, 20], [70, 40], [70, 60], [70, 80],
+    ];
+    const words = ['Hello','Здравствуйте', 'Bonjour', 'Ciao', 
+                   'Hola', 'Guten Tag', 'Willkommen', 'Bienvenidos',
+                   'Benvenuto', 'Bienvenue', 'Добро пожаловать', 'Welcome'];
     for (const [index, word] of words.entries()) {
-      setTimeout(() => setGreeting(word), (index + 2) * 250);
-    }
+      const zone = Math.floor(Math.random() * zones.length);
+      let [top, left] = zones[zone];
+      top += Math.floor(Math.random() * 15) - 7;
+      left += Math.floor(Math.random() * 15) - 7;
+      zones.splice(zone, 1);
+      setTimeout(() => setGreetingArr(prev => 
+        [...prev,
+          <p key={word}
+            className="greeting__container"
+            style={{ top: `${top}vh`, left: `${left}vw` }}
+          >{word}</p>]),
+        (index + 2) * 250);
+      };
+    //setTimeout(() => (() => setShowGreeting(false)), 5000)
   };
   
   useEffect(() => {
     iterateGreeting();
   }, []);
-  useEffect(() => {
+  /*useEffect(() => {
     const key = occupiedZones.length;
     const zones = [
       [22, 20], [22, 40], [22, 60], [22, 80],
@@ -30,7 +47,7 @@ export default function Greetings(props) {
     ];
   
     let zone = Math.floor(Math.random() * 12);
-    while (occupiedZones.includes(zone) || zone === 1) {
+    while (occupiedZones.includes(zone)) {
       zone = Math.floor(Math.random() * 12);
       //if (occupiedZones.length === 11) break;
       //console.log(`key: ${key}`)
@@ -45,13 +62,13 @@ export default function Greetings(props) {
     //console.log(h, w, zone, greeting);
     //console.log('zones: ', occupiedZones)
     greeting && setGreetingArr(prev => [...prev, <p key={key} className="greeting__container" style={{ top: `${h}vh`, left: `${w}vw` }}>{greeting}</p>])
-  }, [greeting]);
+  }, [greeting]);*/
   
   //setTimeout(() => setGreeting(false), 1000);
 
   return (
       <div className="greetings">
-        {greeting && greetingArr.map((gr) => gr)}
+        {greetingArr.map((gr) => gr)}
       </div>
   );
 };
