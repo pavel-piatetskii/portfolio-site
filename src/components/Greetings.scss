@@ -2,21 +2,9 @@
   position: absolute;
   color: transparent;
   animation: greeting-ani 2s none 0s 2 alternate;
-  //animation-direction: alternate;
-  //animation: greeting-ani-2 1s none 0s 1 reverse;
   //animation: name duration timing-function delay iteration-count direction fill-mode;
 }
 
-@keyframes greeting-ani-1 {
-  from {
-    //transform: rotate(0deg);
-    color: white;
-  }
-  to {
-    //transform: rotate(360deg);
-    color: transparent;
-  }
-}
 
 @keyframes greeting-ani {
   from {
