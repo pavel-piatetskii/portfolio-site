@@ -9,3 +9,9 @@
   font-size: 3vh;
   color: white;
 }
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
