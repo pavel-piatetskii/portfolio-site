@@ -17,7 +17,12 @@ function App() {
   };
 
   const [showGreetings, setShowGreetings] = useState(true);
-  const [content, setContent] = useState(<Homepage />)
+  const [content, setContent] = useState('homepage');
+  const [contentComponent, setContentComponent] = useState(contentComponents[content]);
+  
+  useEffect(() => {
+    setContentComponent(contentComponents[content]);
+  }, [content])
 
   return (
     <div className="App">
