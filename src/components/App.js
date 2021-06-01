@@ -11,7 +11,18 @@ function App() {
   return (
     <div className="App">
         {showGreetings && <Greetings setShowGreetings={setShowGreetings} />}
-        {!showGreetings && <NavBar />}
+        {!showGreetings && (
+        <div class="main">
+          <NavBar />
+          <section class="content">
+            <Homepage />
+          </section>
+          <footer>
+            There goes footer
+          </footer>
+        </div>
+        )}
+        
     </div>
   );
 }
