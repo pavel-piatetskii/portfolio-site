@@ -3,8 +3,10 @@ import Greetings from './Greetings';
 import NavBar from './NavBar';
 import Homepage from './Homepage';
 import Projects from './Projects';
+import Resume from './Resume';
 import About from './About';
 import Contacts from './Contacts';
+import Footer from './Footer';
 import { useEffect, useState } from 'react';
 
 function App() {
@@ -13,6 +15,7 @@ function App() {
     homepage: <Homepage />,
     projects: <Projects />,
     about: <About />,
+    resume: <Resume />,
     contacts: <Contacts />,
   };
 
@@ -31,11 +34,9 @@ function App() {
         <div class="main">
           <NavBar setContent={setContent}/>
           <section class="content">
-            {content}
+            {contentComponent}
           </section>
-          <footer>
-            There goes footer
-          </footer>
+          <Footer />
         </div>
         )}
         
