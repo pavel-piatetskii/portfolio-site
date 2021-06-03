@@ -33,7 +33,7 @@ function App() {
         {!showGreetings && (
         <div class="main">
           <NavBar setContent={setContent}/>
-          <section class="content">
+          <section class="main__content">
             {contentComponent}
           </section>
           <Footer />

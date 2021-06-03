@@ -1,0 +1,20 @@
+.projects {
+  flex-direction: column;
+  justify-content:start;
+  align-items: center;
+  width: 100%;
+
+  &__header {
+    margin-top: 5rem;
+  }
+
+  &__container {
+    flex-direction: row;
+    border-top: 2px solid white;
+    width: 66%;
+
+    &__info {
+      flex-direction: column;
+    }
+  }
+}
