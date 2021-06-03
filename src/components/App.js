@@ -7,13 +7,14 @@ import Resume from './Resume';
 import About from './About';
 import Contacts from './Contacts';
 import Footer from './Footer';
+import projects from '../data/projects';
 import { useEffect, useState } from 'react';
 
 function App() {
 
   const contentComponents = {
     homepage: <Homepage />,
-    projects: <Projects />,
+    projects: <Projects projects={projects}/>,
     about: <About />,
     resume: <Resume />,
     contacts: <Contacts />,
@@ -31,9 +32,9 @@ function App() {
     <div className="App">
         {showGreetings && <Greetings setShowGreetings={setShowGreetings} />}
         {!showGreetings && (
-        <div class="main">
+        <div className="main">
           <NavBar setContent={setContent}/>
-          <section class="main__content">
+          <section className="main__content">
             {contentComponent}
           </section>
           <Footer />

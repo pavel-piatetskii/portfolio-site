@@ -2,6 +2,9 @@ import './Projects.scss';
 
 export default function Projects(props) {
 
+  const { projects } = props;
+
+/*
   const projects = [
     {
       name: 'sample1',
@@ -16,14 +19,15 @@ export default function Projects(props) {
       link: 'link2',
     },
   ];
+  */
 
   return (
     <section class="projects">
       <h2 class="projects__header">Projects</h2>
-      {projects.map((project) => {
+      {projects.map((project, index) => {
         const {name, image, description, link} = project;
         return (
-          <article class="projects__container">
+          <article class="projects__container" key={index}>
             <img class="projects__container__image" src={image} alt={name}/>
             <div class="projects__container__info">
               <h3 class="projects__container__info__name">{name}</h3>
