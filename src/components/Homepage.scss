@@ -1,2 +1,23 @@
 .homepage {
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  padding-top: 3rem;
+
+  
+  &__greeting-text {
+    flex-direction: column;
+    width: 33%;
+    margin-right: 150px;
+
+    &__header {
+      //margin-top: 5rem;
+    }
+  }
+
+  &__image {
+    margin-top: 75px;
+  }
+
 }
