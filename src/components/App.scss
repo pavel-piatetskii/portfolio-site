@@ -21,6 +21,10 @@
 
   &__content {
     height: 100%;
+    
+    > * {
+      animation: fast-appearance 0.25s none 0s 1;
+    }
   }
 }
 
@@ -30,4 +34,13 @@ div, article, section {
 
 body {
   background-color: darkslategray;
+}
+
+@keyframes fast-appearance {
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 1;
+  }
 }
