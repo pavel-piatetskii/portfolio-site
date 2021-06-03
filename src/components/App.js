@@ -12,22 +12,24 @@ import { useEffect, useState } from 'react';
 
 function App() {
 
+  const [content, setContent] = useState('homepage');
+  
   const contentComponents = {
-    homepage: <Homepage />,
+    homepage: <Homepage setContent={setContent}/>,
     projects: <Projects projects={projects}/>,
     about: <About />,
     resume: <Resume />,
     contacts: <Contacts />,
   };
-
+  
   const [showGreetings, setShowGreetings] = useState(true);
-  const [content, setContent] = useState('homepage');
   const [contentComponent, setContentComponent] = useState(contentComponents[content]);
+  
+  
   
   useEffect(() => {
     setContentComponent(contentComponents[content]);
   }, [content])
-
   return (
     <div className="App">
         {showGreetings && <Greetings setShowGreetings={setShowGreetings} />}
