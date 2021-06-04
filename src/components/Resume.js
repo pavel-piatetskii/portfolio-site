@@ -1,6 +1,4 @@
 import './Resume.scss';
-//<embed src="https://drive.google.com/file/d/1wzj5IiDtR6LjYltDhV4dUZpBH25MyVS_/view?usp=sharing" width="800px" height="2100px" />
-//<a href="https://drive.google.com/file/d/1wzj5IiDtR6LjYltDhV4dUZpBH25MyVS_/view?usp=sharing">Resume</a>
 
 export default function Resume(props) {
   return (<section class="resume">
@@ -9,14 +7,14 @@ export default function Resume(props) {
 
         <div className="resume__files__download">
           <h4 className="resume__files__download__header">Download resume</h4>
-          <a className="resume__files__download__link" href="">
+          <a className="resume__files__download__link" href="https://drive.google.com/uc?export=download&id=16J5zidLE3OZ2OEXhpuHeMhjC_kdvbLZf">
             <img
               className="resume__files__download__image"
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Google_Docs_2020_Logo.svg/800px-Google_Docs_2020_Logo.svg.png"
             />
           <p>DOC</p>
           </a>
-          <a className="resume__files__download__link" href="">
+          <a className="resume__files__download__link" href="https://drive.google.com/uc?export=download&id=1wzj5IiDtR6LjYltDhV4dUZpBH25MyVS_">
             <img
               className="resume__files__download__image"
               src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg"
@@ -32,4 +30,3 @@ export default function Resume(props) {
       </article>
     </section>)
 }
-
