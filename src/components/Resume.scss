@@ -1,0 +1,36 @@
+.resume {
+  width: 100%;
+  flex-direction: column;
+
+  &__files {
+
+    justify-content: space-around;
+
+    &__download {
+      flex-direction: column;
+      //padding-top: 50px;
+
+      &__header {
+        margin-top: 0;
+      }
+
+      &__link {
+        margin: 25px 0;
+        color: white;
+      }
+
+      &__image {
+        width: 120px;
+        height: 150px;
+      }
+    }
+
+    &__drive {
+      flex-direction: column;
+    }
+    &__live-pdf {
+      width: 850px;
+      height: 1075px;
+    }
+  }
+}

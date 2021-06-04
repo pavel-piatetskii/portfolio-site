@@ -20,7 +20,7 @@
   //min-height: 100vh;
 
   &__content {
-    height: 100%;
+    min-height: 100%;
     
     > * {
       animation: fast-appearance 0.25s none 0s 1;
