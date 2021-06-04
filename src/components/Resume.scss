@@ -9,14 +9,24 @@
     &__download {
       flex-direction: column;
       //padding-top: 50px;
-
+      
       &__header {
         margin-top: 0;
       }
-
+      
       &__link {
         margin: 25px 0;
         color: white;
+        border: 5px solid slategray;
+        border-radius: 50%;
+        padding: 40px;
+        width: 200px;
+        height: 200px;
+
+        &:hover {
+          background-color:slategray;
+          transition: background-color 0.35s;
+        }
       }
 
       &__image {
