@@ -21,8 +21,8 @@ function App() {
     resume: <Resume />,
     contacts: <Contacts />,
   };
-  
-  const [showGreetings, setShowGreetings] = useState(true);
+
+  const [showGreetings, setShowGreetings] = useState(false);
   const [contentComponent, setContentComponent] = useState(contentComponents[content]);
   
   
