@@ -16,13 +16,19 @@
     padding: 25px 0;
 
     &__preview {
-      height: 100%;
       align-items: center;
-
+      
       &__image {
-        max-width: 350px;
-        height: fit-content;
         border: 2px solid slategray;
+        height: fit-content;
+        max-width: 350px;
+        transition: all .2s ease;
+        vertical-align: middle;
+        
+        &:hover {
+          transform: scale(1.05);
+          cursor: pointer;
+        }
       }
     }
 
@@ -39,6 +45,11 @@
       &__name {
         color: bisque;
         margin-top: 0;
+        transition: color .25s;
+
+        &:hover {
+          color: plum;
+        }
       }
 
       &__description {
