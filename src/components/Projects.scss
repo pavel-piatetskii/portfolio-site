@@ -27,7 +27,12 @@
       align-items: flex-start;
       margin-left: 50px;
 
+      &__link {
+        text-decoration: none;
+      }
+
       &__name {
+        color: bisque;
         margin-top: 0;
       }
 

@@ -1,7 +1,7 @@
 const projects = [
   {
     name: 'Portfolio website',
-    image: 'https://miro.medium.com/max/2048/1*mwXHpdt6CTQHxH78dwc6NA.jpeg',
+    image: 'https://raw.githubusercontent.com/pavel-piatetskii/portfolio-site/master/docs/preview.png',
     description: 'My personal portfolio website',
     link: 'https://github.com/pavel-piatetskii/portfolio-site',
   },
