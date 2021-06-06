@@ -1,8 +1,11 @@
 import './Projects.scss';
+import ImageViewer from './ImageViewer';
+import { useState } from 'react';
 
 export default function Projects(props) {
 
   const { projects } = props;
+  const [showImageViewer, setShowImageViewer] = useState(false);
 
   return (
     <section class="projects">
@@ -12,7 +15,12 @@ export default function Projects(props) {
         return (
           <article class="projects__container" key={index}>
             <div class="projects__container__preview">
-              <img class="projects__container__preview__image" src={image} alt={name}/>
+              <img
+                class="projects__container__preview__image"
+                src={image}
+                alt={name}
+                onClick={() => setShowImageViewer(image)}
+              />
             </div>
             <div class="projects__container__info">
               <a className="projects__container__info__link" rel="noreferrer noopener" target="_blank" href={link}>
@@ -23,6 +31,7 @@ export default function Projects(props) {
         </article>
         )}
       )}
+      {showImageViewer && <ImageViewer image={showImageViewer}/>}
     </section>
   )
 }

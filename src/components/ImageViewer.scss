@@ -1,0 +1,10 @@
+.image-viewer {
+  position: fixed;
+  left: calc(50% - 35vw);
+  top: calc(50% - 45vh);
+
+  &__image {
+    height: 100vh;
+    width: fit-content;
+  }
+}

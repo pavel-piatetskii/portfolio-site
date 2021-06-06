@@ -23,9 +23,7 @@ function App() {
   };
 
   const [showGreetings, setShowGreetings] = useState(false);
-  const [contentComponent, setContentComponent] = useState(contentComponents[content]);
-  
-  
+  const [contentComponent, setContentComponent] = useState(contentComponents[content]);  
   
   useEffect(() => {
     setContentComponent(contentComponents[content]);
@@ -42,7 +40,6 @@ function App() {
           <Footer />
         </div>
         )}
-        
     </div>
   );
 }
