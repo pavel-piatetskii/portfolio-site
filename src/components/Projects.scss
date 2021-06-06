@@ -17,7 +17,8 @@
 
     &__image {
       max-width: 350px;
-      //height: 400px;
+      height: fit-content;
+      //object-fit: scale-down;
       border: 2px solid slategray;
     }
 
