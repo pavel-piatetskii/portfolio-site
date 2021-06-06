@@ -13,7 +13,7 @@ const projects = [
   },
   {
     name: 'CocktailSage',
-    image: 'https://raw.githubusercontent.com/pavel-piatetskii/react-sage/master/docs/recipe_page.png',
+    image: 'https://raw.githubusercontent.com/pavel-piatetskii/react-sage/master/docs/_preview.png',
     description: 'Cocktail Sage is a website where you can browse or search existing recipes, add their own twist to them or create a new recipe from scratch!',
     link: 'https://github.com/pavel-piatetskii/react-sage',
   },

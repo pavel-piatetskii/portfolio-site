@@ -15,12 +15,17 @@
     width: 80%;
     padding: 25px 0;
 
-    &__image {
-      max-width: 350px;
-      height: fit-content;
-      //object-fit: scale-down;
-      border: 2px solid slategray;
+    &__preview {
+      height: 100%;
+      align-items: center;
+
+      &__image {
+        max-width: 350px;
+        height: fit-content;
+        border: 2px solid slategray;
+      }
     }
+
 
     &__info {
       flex-direction: column;
