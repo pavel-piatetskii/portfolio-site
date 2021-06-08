@@ -8,9 +8,6 @@ export default function Projects(props) {
   const [showImageViewer, setShowImageViewer] = useState(false);
 
   const imageClicked = function(e) {
-    //const { naturalHeight, naturalWidth} = e.target.naturalHeight;
-    //const shiftHeight = naturalHeight / 2;
-    //const shiftWidth = naturalWidth / 2;
     setShowImageViewer(e.target);
   }
 
@@ -26,8 +23,8 @@ export default function Projects(props) {
                 class="projects__container__preview__image"
                 src={image}
                 alt={name}
-                //onClick={() => setShowImageViewer(image)}
-                onClick={(e) => imageClicked(e)}
+                onClick={() => setShowImageViewer(image)}
+                //onClick={(e) => imageClicked(e)}
               />
             </div>
             <div class="projects__container__info">
