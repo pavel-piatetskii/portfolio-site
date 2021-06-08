@@ -7,7 +7,7 @@ const projects = [
   },
   {
     name: 'Chat module',
-    image: 'https://lh3.googleusercontent.com/69x6Xx_gZcSV8MPoxbQ9n9i4miuk-u-hEshaKMfNXjsDW_JvWUBipS_wZQAo782Ubgao1bpEVN-MC0iD-3wv=w1853-h949-rw',
+    image: 'https://raw.githubusercontent.com/pavel-piatetskii/chat-module/master/docs/chat-module-screenshot.png',
     description: 'Live chat appllicaion with separate rooms',
     link: 'https://github.com/pavel-piatetskii/chat-module',
   },

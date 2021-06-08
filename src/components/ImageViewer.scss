@@ -1,10 +1,18 @@
 .image-viewer {
   position: fixed;
-  left: calc(50% - 35vw);
-  top: calc(50% - 45vh);
+  background-color: rgba(0, 0, 0, .5);
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
 
   &__image {
-    height: 100vh;
-    width: fit-content;
+    //height: 100vh;
+    max-width: 90vw;
+    height: min-content;
+    border: 10px solid white;
+    border-radius: 10px;
   }
 }
