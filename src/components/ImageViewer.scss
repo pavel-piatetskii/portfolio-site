@@ -10,9 +10,16 @@
 
   &__image {
     //height: 100vh;
-    max-width: 90vw;
+    max-width: 80vw;
+    max-height: 80vh;
     height: min-content;
     border: 10px solid white;
     border-radius: 10px;
+  }
+
+  &__buttons {
+    position: fixed;
+    bottom: 2em;
+    left: calc(50vw - 10em)
   }
 }
