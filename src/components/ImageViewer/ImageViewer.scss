@@ -26,15 +26,21 @@
     align-items: center;
 
     &__new-tab, &__close {
-      width: 60px;
-      height:60px;
+      width: 40px;
+      height:40px;
       background-color: rgba(0, 0, 0, .5);
       padding: 10px;
       border-radius: 50%;
-      //margin-top: 40px;
+      margin-top: 10px;
 
       &__label {
         opacity: 0;
+        font-size: 1.2rem;
+      }
+
+      &:hover {
+        transform: scale(.90);
+        cursor: pointer;
       }
 
       &:hover + &__label {

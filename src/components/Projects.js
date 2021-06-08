@@ -1,5 +1,5 @@
 import './Projects.scss';
-import ImageViewer from './ImageViewer';
+import ImageViewer from './ImageViewer/ImageViewer';
 import { useState } from 'react';
 
 export default function Projects(props) {
