@@ -4,12 +4,19 @@ export default function ImageViewer(props) {
 
   const { image, setShowImageViewer } = props;
 
+
+  // Click outside an image closes ImageViewer
+
   const clickSomewhere = function(e) {
     return (e.target.className === "image-viewer") ? setShowImageViewer(false) : false;
   };
 
+
+  // Function to open an image source in a new tab.
+  // This way was chosen because wrapping icon by a-tag breaks CSS
+
   const openNewTab = function(url) {
-    window.open(url, '_blank').focus()
+    window.open(url, '_blank').focus();
   }
   
   return (
