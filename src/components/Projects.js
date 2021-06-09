@@ -7,10 +7,6 @@ export default function Projects(props) {
   const { projects } = props;
   const [showImageViewer, setShowImageViewer] = useState(false);
 
-  const imageClicked = function(e) {
-    setShowImageViewer(e.target);
-  }
-
   return (
     <section class="projects">
       <h2 class="projects__header">Projects</h2>
@@ -24,7 +20,6 @@ export default function Projects(props) {
                 src={image}
                 alt={name}
                 onClick={() => setShowImageViewer(image)}
-                //onClick={(e) => imageClicked(e)}
               />
             </div>
             <div class="projects__container__info">
