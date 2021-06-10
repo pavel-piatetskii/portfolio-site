@@ -11,7 +11,7 @@ export default function Contacts(props) {
         <article className="contacts__container">
           <img className="contacts__container__image" src={image} />
           <span className="contacts__container__name">{name}:</span>
-          <a className="contacts__container__link" rel={newtab && "noreferrer noopener"} target={newtab && "_blank"} href={link}>
+          <a className="text-link" rel={newtab && "noreferrer noopener"} target={newtab && "_blank"} href={link}>
             <span className="contacts__container__value">{value}</span>
           </a>
         </article>
