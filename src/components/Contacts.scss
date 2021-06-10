@@ -1,0 +1,16 @@
+.contacts {
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  &__header {
+    margin: 5rem 0;
+  }
+
+  &__container {
+    flex-direction: column;
+    border-top: 2px solid white;
+    width: 80%;
+    padding: 25px 0;
+  }
+}
