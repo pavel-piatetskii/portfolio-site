@@ -8,11 +8,10 @@
   &__image {
     max-width: 80vw;
     max-height: 80vh;
-    height: min-content;
-    width: min-content;
+    //height: min-content;
+    //width: min-content;
     border: 10px solid white;
     border-radius: 10px;
-    zoom: 100%;
   }
 
   &__buttons {

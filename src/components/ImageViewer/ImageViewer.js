@@ -18,39 +18,58 @@ export default function ImageViewer(props) {
 
   // Function to open an image source in a new tab.
   // This way was chosen because wrapping icon by a-tag breaks CSS
-
   const openNewTab = function(url) {
     window.open(url, '_blank').focus();
   };
 
+  // Change zoom variable and set in to the image style
   const zoomOnScroll = function(e) {
     e.preventDefault();
     zoom += (e.deltaY > 0) ? -0.1 : 0.1;
     imageElement.style.zoom = zoom;
-    //console.log(document.getElementsByClassName('image-viewer__image'))
-    //console.log(imageElement)
   };
 
+  // Change position of image as a mouse moves
   const mouseMoved = function (e) {
     e.preventDefault()
-    console.log(e)
+    const { x, y } = imageElement.getBoundingClientRect();
+    imageElement.style.left = `${x + e.movementX}px`;
+    imageElement.style.top = `${y + e.movementY}px`;
   }
 
+  // When mouse button is pressed, set up listeners and styling for move
   const mouseHold = function(e) {
-    console.log(e);
+    
+    // Set up a listener for mouse movement
     imageElement.addEventListener('mousemove', mouseMoved);
+
+    // When mouse button is released, remove movement listener and 
+    // disable fixed position for an image
     imageElement.addEventListener('mouseup', () => {
       imageElement.removeEventListener('mousemove', mouseMoved);
-    }, {once: true})
+      imageElement.style.position = "";
+    }, {once: true});
+
+    // Get an image current coordinates, set positioning to fixed
+    // and apply fetched coordinates to the image (to make it stay centered)
+    const { x, y } = imageElement.getBoundingClientRect();
+    imageElement.style.position = "fixed";
+    imageElement.style.left = `${x}px`;
+    imageElement.style.top = `${y}px`;
   }
 
+  // Set up variables and listeners when component is mounted
   useEffect(() => {
+    
+    // Assign image element to a variable
     imageElement = document.getElementsByClassName('image-viewer__image')[0];
 
+    // Add the listenert to zoom image by a mouse wheel
     window.addEventListener('wheel', zoomOnScroll, {passive: false});
     imageElement.addEventListener('mousedown', mouseHold);
 
-    return () => imageElement.removeEventListener('wheel', zoomOnScroll)
+    // Remove the mousewheel listener when the component is dismounted
+    return () => window.removeEventListener('wheel', zoomOnScroll)
   }, [])
 
   return (
