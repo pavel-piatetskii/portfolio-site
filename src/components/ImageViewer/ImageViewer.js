@@ -41,12 +41,12 @@ export default function ImageViewer(props) {
   const mouseHold = function(e) {
     
     // Set up a listener for mouse movement
-    imageElement.addEventListener('mousemove', mouseMoved);
+    window.addEventListener('mousemove', mouseMoved);
 
     // When mouse button is released, remove movement listener and 
     // disable fixed position for an image
     imageElement.addEventListener('mouseup', () => {
-      imageElement.removeEventListener('mousemove', mouseMoved);
+      window.removeEventListener('mousemove', mouseMoved);
       imageElement.style.position = "";
     }, {once: true});
 
