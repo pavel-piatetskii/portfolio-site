@@ -1,6 +1,8 @@
 import './About.scss';
 
 export default function About(props) {
+
+  const { showImageViewer, setShowImageViewer } = props;
   
   return (<section class="about">
     <h2 className="about__header">About me</h2>
@@ -17,7 +19,7 @@ export default function About(props) {
                 class="projects__container__preview__image"
                 src="diploma.png"
                 alt="lighthouse-diploma"
-                //onClick={() => setShowImageViewer('diploma.png')}
+                onClick={() => setShowImageViewer('diploma.png')}
           />
           <p>However, Web Dev was almost Terra Incognita for me. I spent 3 months in the <a className="text-link" rel="noreferrer noopener" target="_blank" href="https://www.lighthouselabs.ca/">Lighthouse Labs</a> bootcamp. It was a rough, but extremely beneficial experience.</p>
         </div>

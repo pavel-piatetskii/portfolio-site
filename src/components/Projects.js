@@ -4,8 +4,8 @@ import { useState } from 'react';
 
 export default function Projects(props) {
 
-  const { projects } = props;
-  const [showImageViewer, setShowImageViewer] = useState(false);
+  const { projects, showImageViewer, setShowImageViewer } = props;
+  //const [showImageViewer, setShowImageViewer] = useState(false);
 
   return (
     <section class="projects">
