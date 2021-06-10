@@ -23,7 +23,7 @@ export default function Projects(props) {
               />
             </div>
             <div class="projects__container__info">
-              <a className="projects__container__info__link" rel="noreferrer noopener" target="_blank" href={link}>
+              <a className="text-link" rel="noreferrer noopener" target="_blank" href={link}>
                 <h3 class="projects__container__info__name">{name}</h3>
               </a>
               <p class="projects__container__info__description">{description}</p>

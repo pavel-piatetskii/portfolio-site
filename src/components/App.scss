@@ -40,6 +40,16 @@ body {
   background-color: darkslategray;
 }
 
+.text-link {
+  text-decoration: none;
+  color: bisque;
+  transition: color .25s;
+  
+  &:hover {
+    color: plum;
+  }
+}
+
 @keyframes fast-appearance {
   from {
     opacity: 0
