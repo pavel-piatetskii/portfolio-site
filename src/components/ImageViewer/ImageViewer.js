@@ -5,7 +5,7 @@ export default function ImageViewer(props) {
 
   const { image, setShowImageViewer } = props;
   let zoom = 1;
-
+  let imageElement;
   // Click outside an image closes ImageViewer
 
   const clickSomewhere = function(e) {
@@ -21,17 +21,36 @@ export default function ImageViewer(props) {
 
   const openNewTab = function(url) {
     window.open(url, '_blank').focus();
-  }
+  };
 
   const zoomOnScroll = function(e) {
     e.preventDefault();
-    zoom += (e.deltaY > 0 ) ? -0.1 : 0.1;
-    document.getElementsByClassName('image-viewer__image')[0].style.zoom = zoom;
+    zoom += (e.deltaY > 0) ? -0.1 : 0.1;
+    imageElement.style.zoom = zoom;
+    //console.log(document.getElementsByClassName('image-viewer__image'))
+    //console.log(imageElement)
+  };
+
+  const mouseMoved = function (e) {
+    e.preventDefault()
+    console.log(e)
+  }
+
+  const mouseHold = function(e) {
+    console.log(e);
+    imageElement.addEventListener('mousemove', mouseMoved);
+    imageElement.addEventListener('mouseup', () => {
+      imageElement.removeEventListener('mousemove', mouseMoved);
+    }, {once: true})
   }
 
   useEffect(() => {
+    imageElement = document.getElementsByClassName('image-viewer__image')[0];
+
     window.addEventListener('wheel', zoomOnScroll, {passive: false});
-    return () => window.removeEventListener('wheel', zoomOnScroll)
+    imageElement.addEventListener('mousedown', mouseHold);
+
+    return () => imageElement.removeEventListener('wheel', zoomOnScroll)
   }, [])
 
   return (
