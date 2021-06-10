@@ -14,13 +14,26 @@
     padding: 25px 0;
 
     &__image {
-      height: 100px;
-      width: 100px;
+      height: 3em;
+      width: 3em;
       margin-right: 2rem;
     }
 
     &__name {
       min-width: 12rem;
+    }
+
+    &__link {
+      text-decoration: none;
+    }
+
+    &__value {
+      color: bisque;
+      transition: color .25s;
+
+      &:hover {
+        color: plum;
+      }
     }
   }
 }
