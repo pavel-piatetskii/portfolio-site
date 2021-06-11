@@ -5,7 +5,7 @@ export default function About(props) {
   const { showImageViewer, setShowImageViewer } = props;
   
   return (<section class="about">
-    <h2 className="about__header">About me</h2>
+    <h2 className="section-header">About me</h2>
       <article className="about__container">
 
         <p>For 8 years I had been working as a Network Engineer. In 2020 I decided to change my career path and to become a Web Developer.</p>

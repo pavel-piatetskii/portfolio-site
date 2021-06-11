@@ -9,7 +9,7 @@ export default function Projects(props) {
 
   return (
     <section class="projects">
-      <h2 class="projects__header">Projects</h2>
+      <h2 class="section-header">Projects</h2>
       {projects.map((project, index) => {
         const {name, image, description, link} = project;
         return (

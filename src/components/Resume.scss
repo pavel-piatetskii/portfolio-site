@@ -3,12 +3,10 @@
   flex-direction: column;
 
   &__files {
-
     justify-content: space-around;
 
     &__download {
       flex-direction: column;
-      //padding-top: 50px;
       
       &__header {
         margin-top: 0;
