@@ -16,13 +16,15 @@ export default function About(props) {
 
         <div className="about__container__img-txt">
           <img
-                class="projects__container__preview__image"
+                class="about__container__img-txt__img"
                 src="diploma.png"
                 alt="lighthouse-diploma"
                 onClick={() => setShowImageViewer('diploma.png')}
           />
-          <p>However, Web Dev was almost Terra Incognita for me. I spent 3 months in the <a className="text-link" rel="noreferrer noopener" target="_blank" href="https://www.lighthouselabs.ca/">Lighthouse Labs</a> bootcamp. It was a rough, but extremely beneficial experience.</p>
+          <p className="about__container__img-txt__txt">However, Web Dev was almost Terra Incognita for me. Python application proved that I am able to learn new things on my own, but I needed to learn the most recent and the best coding practices. To do that I spent 1.5 months at the part-time and 3 months at the full-time <a className="text-link" rel="noreferrer noopener" target="_blank" href="https://www.lighthouselabs.ca/">Lighthouse Labs</a> bootcamps. It was a rough, but extremely beneficial experience.</p>
         </div>
+
+        <p>Now I continue to develop new projects, mostly using React.js, but alway implementing something new. My creed is to never stop learning!</p>
 
         
 

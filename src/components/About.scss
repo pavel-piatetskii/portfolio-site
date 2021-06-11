@@ -12,6 +12,22 @@
     align-items: flex-start;
     text-align: left;
     border-top: 1px solid white;
-    width: 80%;
+    width: 60%;
+
+    &__img-txt {
+
+      margin: 1em 0;
+
+      &__img {
+        width: 200px;
+        height: min-content;
+        border: 2px solid slategray;
+        margin-right: 5%;
+      }
+
+      &__txt {
+        margin: 0;
+      }
+    }
   }
 }
