@@ -10,9 +10,9 @@ export default function Greetings(props) {
 
     // Base positions for greetings, organized as 12 zones
     const zones = [
-      [22, 20], [22, 40], [22, 60], [22, 80],
-      [46, 20], [46, 40], [46, 60], [46, 80],
-      [70, 20], [70, 40], [70, 60], [70, 80],
+      [5, 3], [15, 25], [3, 45], [20, 70],
+      [60, 10], [45, 30], [50, 50], [55, 70],
+      [80, 10], [80, 30], [80, 50], [80, 70],
     ];
 
     const words = ['Hello','Здравствуйте', 'Bonjour', 'Ciao', 
@@ -27,8 +27,8 @@ export default function Greetings(props) {
       let [top, left] = zones[zone];
 
       // Randomly adjust position coordinates to avoid the "grid effect"
-      top += Math.floor(Math.random() * 15) - 7;
-      left += Math.floor(Math.random() * 15) - 7;
+      //top += Math.floor(Math.random() * 15) - 7;
+      //left += Math.floor(Math.random() * 6) - 3;
 
       // Delete the current zone from the set to avoid overlapping
       zones.splice(zone, 1);

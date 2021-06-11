@@ -1,6 +1,10 @@
 .greeting__container {
   position: absolute;
   color: transparent;
+
+  font-size: 30pt;
+  width: fit-content;
+
   animation: greeting-ani 2s none 0s 2 alternate;
   //animation: name duration timing-function delay iteration-count direction fill-mode;
 }
