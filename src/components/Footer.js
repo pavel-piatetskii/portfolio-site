@@ -5,8 +5,8 @@ export default function Footer(props) {
   //const {setContent} = props;
 
   return (<footer class="footer">
-      <div class="footer">
-        This is footer
-      </div>
+      <p class="footer__txt">
+        Pavel Piatetskii - 2021
+      </p>
     </footer>)
 }
