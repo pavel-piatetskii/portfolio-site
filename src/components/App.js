@@ -34,6 +34,7 @@ function App() {
   }, [content])
   return (
     <div className="App">
+        <div className="background-c"><div className="background-i"></div></div>
         {showGreetings && <Greetings setShowGreetings={setShowGreetings} />}
         {!showGreetings && (
         <div className="main">
