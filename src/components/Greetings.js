@@ -16,8 +16,8 @@ export default function Greetings(props) {
     ];
 
     const words = ['Hello','Здравствуйте', 'Bonjour', 'Ciao', 
-                   'Hola', 'Guten Tag', 'Willkommen', 'Bienvenidos',
-                   'Benvenuto', 'Bienvenue', 'Добро пожаловать', 'Welcome'];
+                   'Hola', 'Guten Tag', '你好', 'Olá',
+                   'こんにちは', '안녕하세요', 'مرحبا', 'नमस्ते'];
 
     // Iterate through greetings 
     for (const [index, word] of words.entries()) {

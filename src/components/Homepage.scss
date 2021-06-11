@@ -22,8 +22,10 @@
 
   &__image {
     margin-top: 75px;
-    border: 10px slategray inset;
+    border: 20px slategray inset;
     border-radius: 50%;
+    height: 50vh;
+    max-height: 400px;
   }
 
 }
