@@ -11,19 +11,29 @@
     width: 60%;
 
     &__img-txt {
-
       margin: 1em 0;
 
       &__img {
         width: 200px;
-        height: min-content;
         border: 2px solid slategray;
         margin-right: 5%;
+        float: left;
       }
 
       &__txt {
         margin: 0;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .about__container {
+    width: 90%;
+
+    &__img-txt__img {
+      width: 25vw;
+      float: left;
     }
   }
 }
