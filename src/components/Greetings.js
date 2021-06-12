@@ -37,7 +37,7 @@ export default function Greetings(props) {
       setTimeout(() => setGreetingArr(prev => 
         [...prev,
           <p key={word}
-            className="greeting__container"
+            className="greetings__container"
             style={{ top: `${top}vh`, left: `${left}vw` }}
           >{word}</p>]),
         (index + 2) * 250);
