@@ -26,7 +26,8 @@ function App() {
     contacts: <Contacts />,
   };
 
-  const [showGreetings, setShowGreetings] = useState(true);
+  // State controlling ghreetings component (now disabled for debugging)
+  const [showGreetings, setShowGreetings] = useState(false);
   const [contentComponent, setContentComponent] = useState(contentComponents[content]);  
   
   useEffect(() => {
