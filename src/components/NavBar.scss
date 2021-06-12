@@ -23,7 +23,7 @@
     }
 }
 
-@media screen and (max-width: 750px){
+@media screen and (max-width: var(--media-mobile-threshold)){
   .navbar {
     font-size: 2vh;
   }
