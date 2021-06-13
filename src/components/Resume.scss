@@ -44,7 +44,7 @@
   }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 800px) {
   .resume {
     align-items: center;
 
@@ -96,7 +96,16 @@
       &__live-pdf {
         width: 90%;
         height: 102vw;
+        margin-bottom: 5vw;
       }
     }
+  }
+}
+
+@media screen and (min-width: 750px) {
+  
+  .resume{
+
+    //color: blue;
   }
 }
