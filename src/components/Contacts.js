@@ -10,12 +10,15 @@ export default function Contacts(props) {
       return (
         <article className="contacts__container">
           <img className="contacts__container__image" src={image} />
-          <span className="contacts__container__name">{name}:</span>
-          <a className="text-link" rel={newtab && "noreferrer noopener"} target={newtab && "_blank"} href={link}>
-            <span className="contacts__container__value">{value}</span>
-          </a>
+          <div className="contacts__container__name-value-wrapper">
+            <span className="contacts__container__name">{name}:</span>
+            <a className="text-link" rel={newtab && "noreferrer noopener"} target={newtab && "_blank"} href={link}>
+              <span className="contacts__container__value">{value}</span>
+            </a>
+          </div>
         </article>
-      )}
+      )
+    }
     )}
   </section>)
 }
