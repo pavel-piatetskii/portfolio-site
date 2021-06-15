@@ -11,7 +11,7 @@ export default function Projects(props) {
     <section class="projects">
       <h2 class="section-header">Projects</h2>
       {projects.map((project, index) => {
-        const {name, image, description, link} = project;
+        const {name, image, description, techstack, link} = project;
         return (
           <article class="projects__container" key={index}>
             <div class="projects__container__preview">
@@ -27,6 +27,7 @@ export default function Projects(props) {
                 <h3 class="projects__container__info__name">{name}</h3>
               </a>
               <p class="projects__container__info__description">{description}</p>
+              <p class="projects__container__info__description"><strong><u>Tech stack:</u></strong> {techstack}</p>
             </div>
         </article>
         )}

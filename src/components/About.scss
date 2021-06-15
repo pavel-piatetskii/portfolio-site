@@ -15,7 +15,8 @@
 
       &__img {
         width: 200px;
-        border: 2px solid slategray;
+        border: 0.25vw solid white;
+        border-radius: 0.5vw;
         margin-right: 5%;
         float: left;
         transition: transform .2s;
