@@ -75,10 +75,11 @@
         }
 
         &__link {
-          width: 8vw;
-          height: 8vw;
-          padding: 3vw;
+          width: 9vw;
+          height: 9vw;
+          padding: 4vw;
           margin: 0;
+
         }
 
         &__image {
@@ -88,7 +89,8 @@
 
         &__label {
           margin: 0;
-          font-size: 2vw;
+          font-size: 2.5vw;
+          font-weight: bold;
         }
       }
 
