@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
 import './ImageViewer.scss';
+
+
 const { clickSomewhere, openNewTab, zoomOnScroll, mouseHold } = require('./helpers')
 export default function ImageViewer(props) {
 
@@ -24,10 +26,10 @@ export default function ImageViewer(props) {
     <section class="image-viewer" onClick={(e) => clickSomewhere(e, setShowImageViewer)}>
       <img className="image-viewer__image" src={image} alt="project preview" />
       <div className="image-viewer__buttons">
-        <img src="newtab.png" className="image-viewer__buttons__new-tab" alt="open in new tab"
+        <img src="/images/newtab.png" className="image-viewer__buttons__new-tab" alt="open in new tab"
              onClick={() => openNewTab(image)}></img>
         <span className="image-viewer__buttons__new-tab__label">Open in tab</span>
-        <img src="close.png" className="image-viewer__buttons__close"
+        <img src="/images/close.png" className="image-viewer__buttons__close"
              onClick={() => setShowImageViewer(false)} alt="close"></img>
         <span className="image-viewer__buttons__close__label">Close</span>
       </div>

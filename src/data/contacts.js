@@ -15,14 +15,14 @@ const contactsData = [
   },
   {
     name: 'GitHub',
-    image: 'github-logo.png',
+    image: 'images/github-logo.png',
     value: 'https://github.com/pavel-piatetskii',
     link: 'https://github.com/pavel-piatetskii',
     newtab: true,
   },
   {
     name: 'LinkedIn',
-    image: 'linkedin-logo.png',
+    image: 'images/linkedin-logo.png',
     value: 'https://www.linkedin.com/in/pavel-piatetskii-1887241a0/',
     link: 'https://www.linkedin.com/in/pavel-piatetskii-1887241a0/',
     newtab: true,
