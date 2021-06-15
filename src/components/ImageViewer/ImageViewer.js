@@ -23,7 +23,7 @@ export default function ImageViewer(props) {
   }, [])
 
   return (
-    <section class="image-viewer" onClick={(e) => clickSomewhere(e, setShowImageViewer)}>
+    <section className="image-viewer" onClick={(e) => clickSomewhere(e, setShowImageViewer)}>
       <img className="image-viewer__image" src={image} alt="project preview" />
       <div className="image-viewer__buttons">
         <img src="/images/newtab.png" className="image-viewer__buttons__new-tab" alt="open in new tab"
