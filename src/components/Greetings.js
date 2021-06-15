@@ -11,9 +11,9 @@ export default function Greetings(props) {
 
     // Base positions for greetings, organized as 12 zones
     const zones = [
-      [5, 8], [15, 28], [3, 55], [20, 75],
-      [35, 10], [45, 39], [30, 58], [55, 73],
-      [80, 10], [70, 33], [60, 49], [80, 77],
+      [5, 8], [15, 28], [3, 55], [20, 73],
+      [35, 10], [45, 39], [30, 58], [55, 70],
+      [80, 10], [70, 33], [60, 49], [80, 75],
     ];
 
     const words = ['Hello', 'Здравствуйте', 'Bonjour', 'Ciao',
