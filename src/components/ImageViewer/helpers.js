@@ -18,8 +18,7 @@ const zoomOnScroll = function(e, imageElement) {
   e.preventDefault();
   const oldZoom = Number(imageElement.style.zoom) || 1;
   const newZoom = oldZoom + ((e.deltaY > 0) ? -0.1 : 0.1);
-  imageElement.style.zoom = (newZoom > 0.1) ? newZoom : 0.2
-  console.log(imageElement.style.zoom)
+  imageElement.style.zoom = (newZoom > 0.1) ? newZoom : 0.2;
 };
 
 // Change position of image as a mouse moves
