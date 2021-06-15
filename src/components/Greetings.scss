@@ -1,9 +1,10 @@
 .greetings__container {
   position: absolute;
   color: transparent;
+  width: fit-content;
 
   font-size: 3vw;
-  width: fit-content;
+  font-family: 'Montserrat', sans-serif;
 
   animation: greeting-ani 2s none 0s 2 alternate;
   //animation: name duration timing-function delay iteration-count direction fill-mode;

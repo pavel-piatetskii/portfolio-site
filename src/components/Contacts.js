@@ -3,7 +3,7 @@ import contactsData from 'data/contacts'
 
 export default function Contacts(props) {
 
-  return (<section class="contacts">
+  return (<section className="contacts">
     <h2 className="section-header">Contacts</h2>
     {contactsData.map(contact => {
       const { image, name, value, link, newtab } = contact;

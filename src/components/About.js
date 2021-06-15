@@ -4,7 +4,7 @@ export default function About(props) {
 
   const { setShowImageViewer } = props;
 
-  return (<section class="about">
+  return (<section className="about">
     <h2 className="section-header">About me</h2>
     <article className="about__container">
 
@@ -17,7 +17,7 @@ export default function About(props) {
       <p className="about__container__img-txt">
 
         <img
-          class="about__container__img-txt__img"
+          className="about__container__img-txt__img"
           src="images/diploma.png"
           alt="lighthouse-diploma"
           onClick={() => setShowImageViewer('images/diploma.png')}

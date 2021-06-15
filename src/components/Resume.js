@@ -1,7 +1,7 @@
 import './Resume.scss';
 
 export default function Resume(props) {
-  return (<section class="resume">
+  return (<section className="resume">
     <h2 className="section-header">Resume</h2>
     <article className="resume__files">
 
