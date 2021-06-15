@@ -4,14 +4,14 @@ const contactsData = [
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/2560px-Gmail_icon_%282020%29.svg.png',
     value: 'pavel.piatetskii@gmail.com',
     link: 'mailto:pavel.piatetskii@gmail.com',
-    newtab: false,
+    newtab: '',
   },
   {
     name: 'Phone',
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Phone_Shiny_Icon.svg/1024px-Phone_Shiny_Icon.svg.png',
     value: '604-363-17-24',
     link: 'tel:+16043631724',
-    newtab: false,
+    newtab: '',
   },
   {
     name: 'GitHub',

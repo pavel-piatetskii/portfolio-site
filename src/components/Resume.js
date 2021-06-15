@@ -13,6 +13,7 @@ export default function Resume(props) {
             <img
               className="resume__files__download__image"
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Google_Docs_2020_Logo.svg/800px-Google_Docs_2020_Logo.svg.png"
+              alt="doc"
             />
           <p className="resume__files__download__label">DOC</p>
           </a>
@@ -23,6 +24,7 @@ export default function Resume(props) {
             <img
               className="resume__files__download__image"
               src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg"
+              alt="pdf"
             />
           <p className="resume__files__download__label">PDF</p>
           </a>
@@ -31,7 +33,11 @@ export default function Resume(props) {
       </div>
       <div className="resume__files__drive">
         <h4 className="resume__files__drive__header">Google drive</h4>
-        <iframe className="resume__files__live-pdf" src="https://docs.google.com/viewer?srcid=1wzj5IiDtR6LjYltDhV4dUZpBH25MyVS_&pid=explorer&efh=false&a=v&chrome=fals&embedded=true" ></iframe>
+        <iframe
+          className="resume__files__live-pdf"
+          src="https://docs.google.com/viewer?srcid=1wzj5IiDtR6LjYltDhV4dUZpBH25MyVS_&pid=explorer&efh=false&a=v&chrome=fals&embedded=true"
+          title="Live PDF file from Google drive"
+        ></iframe>
       </div>
 
     </article>

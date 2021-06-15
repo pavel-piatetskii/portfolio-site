@@ -2,7 +2,7 @@ import './About.scss';
 
 export default function About(props) {
 
-  const { showImageViewer, setShowImageViewer } = props;
+  const { setShowImageViewer } = props;
 
   return (<section class="about">
     <h2 className="section-header">About me</h2>

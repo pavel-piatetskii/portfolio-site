@@ -18,21 +18,24 @@ function App() {
   const [content, setContent] = useState('homepage');
   const [showImageViewer, setShowImageViewer] = useState(false);
 
-  const contentComponents = {
-    homepage: <Homepage setContent={setContent}/>,
-    projects: <Projects projects={projects} showImageViewer={showImageViewer} setShowImageViewer={setShowImageViewer}/>,
-    about: <About showImageViewer={showImageViewer} setShowImageViewer={setShowImageViewer}/>,
-    resume: <Resume />,
-    contacts: <Contacts />,
-  };
-
+  
   // State controlling ghreetings component (now disabled for debugging)
-  const [showGreetings, setShowGreetings] = useState(false);
-  const [contentComponent, setContentComponent] = useState(contentComponents[content]);  
+  const [showGreetings, setShowGreetings] = useState(true);
+  const [contentComponent, setContentComponent] = useState('');  
+  
   
   useEffect(() => {
+    const contentComponents = {
+      homepage: <Homepage setContent={setContent}/>,
+      projects: <Projects projects={projects} showImageViewer={showImageViewer} setShowImageViewer={setShowImageViewer}/>,
+      about: <About showImageViewer={showImageViewer} setShowImageViewer={setShowImageViewer}/>,
+      resume: <Resume />,
+      contacts: <Contacts />,
+    };
     setContentComponent(contentComponents[content]);
-  }, [content])
+  }, [content, showImageViewer]);
+
+
   return (
     <div className="App">
         <div className="background-c"><div className="background-i"></div></div>

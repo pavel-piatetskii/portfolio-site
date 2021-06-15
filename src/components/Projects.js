@@ -1,11 +1,10 @@
 import './Projects.scss';
 import ImageViewer from './ImageViewer/ImageViewer';
-import { useState } from 'react';
 
+// Component with a list of projects
 export default function Projects(props) {
 
   const { projects, showImageViewer, setShowImageViewer } = props;
-  //const [showImageViewer, setShowImageViewer] = useState(false);
 
   return (
     <section class="projects">

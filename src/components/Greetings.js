@@ -5,8 +5,9 @@ export default function Greetings(props) {
 
   const { setShowGreetings } = props;
   const [greetingArr, setGreetingArr] = useState([]);
-  
-  const iterateGreeting = function () {
+
+  // Launch animations only once, on the Greetings component load
+  useEffect(() => {
 
     // Base positions for greetings, organized as 12 zones
     const zones = [
@@ -15,9 +16,9 @@ export default function Greetings(props) {
       [80, 10], [70, 33], [60, 49], [80, 77],
     ];
 
-    const words = ['Hello','Здравствуйте', 'Bonjour', 'Ciao', 
-                   'Hola', 'Guten Tag', '你好', 'Olá',
-                   'こんにちは', '안녕하세요', 'مرحبا', 'नमस्ते'];
+    const words = ['Hello', 'Здравствуйте', 'Bonjour', 'Ciao',
+      'Hola', 'Guten Tag', '你好', 'Olá',
+      'こんにちは', '안녕하세요', 'مرحبا', 'नमस्ते'];
 
     // Iterate through greetings 
     for (const [index, word] of words.entries()) {
@@ -34,28 +35,23 @@ export default function Greetings(props) {
       zones.splice(zone, 1);
 
       // set timeout to add element for the current greeting with some delay
-      setTimeout(() => setGreetingArr(prev => 
+      setTimeout(() => setGreetingArr(prev =>
         [...prev,
-          <p key={word}
-            className="greetings__container"
-            style={{ top: `${top}vh`, left: `${left}vw` }}
-          >{word}</p>]),
+        <p key={word}
+          className="greetings__container"
+          style={{ top: `${top}vh`, left: `${left}vw` }}
+        >{word}</p>]),
         (index + 2) * 250);
-      };
+    };
 
     // Disable the Greeting component after all greetings were showed
-    setTimeout(() => setShowGreetings(false), 7250)
-  };
-  
-  // Launch iterating function on the Greetings component load
-  useEffect(() => {
-    iterateGreeting();
-  }, []);
+    setTimeout(() => setShowGreetings(false), 7250);
+  }, [setShowGreetings]);
 
   return (
-      <div className="greetings">
-        {greetingArr.map((gr) => gr)}
-      </div>
+    <div className="greetings">
+      {greetingArr.map((gr) => gr)}
+    </div>
   );
 };
 
