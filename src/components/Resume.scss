@@ -11,10 +11,6 @@
     &__download {
       flex-direction: column;
 
-      &__header {
-      //  margin-top: 1vw;
-      }
-
       &__link {
         margin: 25px 0;
         color: white;
@@ -37,7 +33,7 @@
       }
 
       &__label {
-        margin: 0.5vw 0;
+        margin: 0;
       }
     }
 

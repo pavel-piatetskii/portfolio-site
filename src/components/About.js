@@ -18,9 +18,9 @@ export default function About(props) {
 
         <img
           class="about__container__img-txt__img"
-          src="diploma.png"
+          src="images/diploma.png"
           alt="lighthouse-diploma"
-          onClick={() => setShowImageViewer('diploma.png')}
+          onClick={() => setShowImageViewer('images/diploma.png')}
         />
             However, Web Dev was almost Terra Incognita for me. Python application proved that I am able to learn new things on my own, but I needed to learn the most recent and the best coding practices. To do that I spent 1.5 months at the part-time and 3 months at the full-time <a className="text-link" rel="noreferrer noopener" target="_blank" href="https://www.lighthouselabs.ca/">Lighthouse Labs</a> bootcamps. It was a rough, but extremely beneficial experience.</p>
 

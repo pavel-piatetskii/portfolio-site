@@ -18,6 +18,12 @@
         border: 2px solid slategray;
         margin-right: 5%;
         float: left;
+        transition: transform .2s;
+
+        &:hover {
+          transform: scale(1.05);
+          cursor: pointer;
+        }
       }
 
       &__txt {
