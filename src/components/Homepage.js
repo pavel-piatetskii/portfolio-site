@@ -10,7 +10,7 @@ export default function Homepage(props) {
         <h2 className="section-header">Welcome</h2>
 
         <p className="homepage__greeting-text__paragraph">
-            to the website of a Full Stack Developer Pavel Piatetskii!
+            to the website of a Full Stack Developer Pavel Piatetsky!
         </p>
         
         <p className="homepage__greeting-text__paragraph">

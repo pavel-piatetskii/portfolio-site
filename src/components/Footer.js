@@ -6,7 +6,7 @@ export default function Footer(props) {
 
   return (<footer className="footer">
       <p className="footer__txt">
-        Pavel Piatetskii - 2021
+        Pavel Piatetsky - 2024
       </p>
     </footer>)
 }
