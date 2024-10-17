@@ -13,7 +13,8 @@ export default function Homepage(props) {
             to the website of a Full Stack Developer Pavel Piatetsky!
         </p>
         
-        <p className="homepage__greeting-text__paragraph">
+        <p className="text-red-900"> 
+          {/* homepage__greeting-text__paragraph  */}
           Probably you would like to&nbsp;
           <span className="text-link" onClick={() => setContent('about')}>
             read about me

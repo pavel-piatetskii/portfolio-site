@@ -20,7 +20,7 @@ function App() {
 
   
   // State controlling ghreetings component (now disabled for debugging)
-  const [showGreetings, setShowGreetings] = useState(true);
+  const [showGreetings, setShowGreetings] = useState(false);
   const [contentComponent, setContentComponent] = useState('');  
   
   
@@ -38,7 +38,8 @@ function App() {
 
   return (
     <div className="App">
-        <div className="background-c"><div className="background-i"></div></div>
+        {/* <div className="background-c"><div className="background-i"></div></div> */}
+        <div className="tex"><div className="background-i"></div></div>
         {showGreetings && <Greetings setShowGreetings={setShowGreetings} />}
         {!showGreetings && (
         <div className="main">
