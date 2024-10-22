@@ -1,11 +1,11 @@
-import './Footer.scss';
+// import './Footer.scss';
 
 export default function Footer(props) {
 
   //const {setContent} = props;
 
-  return (<footer className="footer">
-      <p className="footer__txt text-red-900">
+  return (<footer className="border-t-white border-t-2 h-16 flex-center justify-center items-center">
+      <p>
         Pavel Piatetsky - 2024
       </p>
     </footer>)

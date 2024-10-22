@@ -39,7 +39,9 @@ function App() {
   return (
     <div className="App">
         {/* <div className="background-c"><div className="background-i"></div></div> */}
-        <div className="tex"><div className="background-i"></div></div>
+        <div className="bg-[#285064] inset-0 z-[-1] size-full fixed">
+          <div className="opacity-30 bg-van-backgr size-full bg-cover"></div>
+        </div>
         {showGreetings && <Greetings setShowGreetings={setShowGreetings} />}
         {!showGreetings && (
         <div className="main">
