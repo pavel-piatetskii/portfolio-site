@@ -3,7 +3,7 @@ const projects = [
     name: 'Portfolio website',
     image: 'https://raw.githubusercontent.com/pavel-piatetskii/portfolio-site/master/docs/preview.png',
     description: 'My personal portfolio website',
-    techstack: 'Javascript/Node.js, React.js, HTML5/CSS3/SASS',
+    techstack: 'Javascript/Node.js, React.js, HTML5/CSS3/SASS, Tailwind',
     link: 'https://github.com/pavel-piatetskii/portfolio-site',
   },
   {

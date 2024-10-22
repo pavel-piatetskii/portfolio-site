@@ -29,7 +29,7 @@ export default function Projects(props) {
                 <h3 className="font-['Montserrat'] mb-3">{name}</h3>
               </a>
               <p className="projects__container__info__description">{description}</p>
-              <p className="projects__container__info__description"><strong><u>Tech stack:</u></strong> {techstack}</p>
+              <p className="projects__container__info__description mt-2"><strong><u>Tech stack:</u></strong> {techstack}</p>
             </div>
         </article>
         )}
